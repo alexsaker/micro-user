@@ -1,0 +1,19 @@
+version: '3'
+services:
+  api:
+    build: .
+    container_name: "micro-users"
+    ports:
+    - "8080:8080"
+    links:
+    - "mongodb"
+    depends_on:
+    - "mongodb"
+    environment:
+      MONGO_DB_URI : mongodb://mongodb:27017/test
+
+  mongodb:
+    image: "mongo"
+    container_name: "mongo-micro-db"
+    ports:
+    - "27017:27017"

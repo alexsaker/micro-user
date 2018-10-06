@@ -1,0 +1,18 @@
+micro.user.version : v1
+micronaut:
+    application:
+        name: micro-user
+    server:
+        port: 8080
+        cors:
+            enabled: true
+            configurations:
+                web:
+                    exposedHeaders:
+                    - Content-Type
+                    - Authorization
+
+
+#mongodb:
+ #   uri: mongodb://192.168.99.100:27017/test
+mongodb.uri: ${MONGO_DB_URI}
