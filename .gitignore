@@ -1,7 +1,5 @@
 bin
 build
-gradle
-.gradle
 .idea
 .settings
 .project
